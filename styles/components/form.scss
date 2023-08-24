@@ -1,0 +1,86 @@
+.form {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  &-row {
+    display: flex;
+    gap: 0 30px;
+    margin: 0 0 34px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &_submit {
+      justify-content: center;
+    }
+  }
+
+  &-input,
+  .pseudo-select {
+    width: calc((100% - 28px - 28px) / 3);
+  }
+
+  &-input {
+    position: relative;
+
+    .input:focus + .form-input__label,
+    .is-filled + .form-input__label {
+      font-size: 10px;
+      line-height: 14px;
+
+      padding: 0 10px;
+
+      transition: $transition-in;
+    }
+
+    &__label {
+      @include text-lvl-4;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      padding: 10px;
+
+      color: $gray;
+
+      transition: $transition-out;
+    }
+
+    &_range {
+      width: calc((100% - 30px - 30px) / 3 * 2 + 30px);
+    }
+  }
+
+  &__submit {
+    @include button(370px, $white, $sky);
+  }
+
+}
+
+@include mobile {
+  .form {
+    &-row {
+      display: block;
+    }
+
+    .pseudo-select,
+    &-input {
+      margin: 0 0 34px;
+      padding: 0 1px;
+      box-sizing: border-box;
+      width: 100%;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    &__submit {
+      width: 100%;
+    }
+  }
+}

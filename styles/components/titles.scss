@@ -1,0 +1,23 @@
+.title-level-1 {
+  @include text-lvl-1;
+
+  color: $black;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  &_sky {
+    color: $sky;
+  }
+
+  &_short {
+    max-width: 780px;
+  }
+}
+
+@include tablet {
+  .title-level-1 {
+    &_short {
+      max-width: 520px;
+    }
+  }
+}

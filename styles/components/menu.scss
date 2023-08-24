@@ -1,0 +1,62 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0 60px;
+
+  &__item {
+    @include text-lvl-6;
+
+    color: $white;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: $transition-out;
+
+    &:hover,
+    &-active {
+      color: $blue;
+
+      transition: $transition-in;
+    }
+  }
+}
+
+@include tablet {
+  .menu {
+    gap: 0 30px;
+  }
+}
+
+@include mobile {
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+
+    padding: 20px;
+
+    background: rgba(16, 16, 29, 0.90);
+
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 top;
+    transition: $transition-out;
+
+    &.is-active {
+      display: block;
+
+      opacity: 1;
+      transform: scaleY(1);
+      transition: $transition-in;
+
+      .menu__item {
+        display: block;
+        margin: 0 0 20px;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

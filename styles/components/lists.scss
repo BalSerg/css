@@ -1,0 +1,32 @@
+.ul-list {
+  &__item {
+    @include text-lvl-3;
+
+    margin: 0 0 5px;
+
+    color: $black;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &_ndash {
+    .ul-list__item {
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+      padding: 0 0 0 10px;
+
+      &:before {
+        display: block;
+        width: 5px;
+        height: 2px;
+
+        background: $black;
+
+        content: "";
+      }
+    }
+  }
+}

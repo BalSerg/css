@@ -1,0 +1,9 @@
+.button {
+  &_sky {
+    @include button(183px, $white, $blue);
+  }
+
+  &_white {
+    @include button(183px, $black, $white);
+  }
+}

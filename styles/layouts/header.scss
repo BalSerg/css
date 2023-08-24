@@ -1,0 +1,42 @@
+@import "../services/mixins";
+
+.header {
+  background: rgba(16, 16, 29, 0.90);
+
+  &-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 32px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_sticky {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+}
+
+.logo {
+  @include text-lvl-2;
+
+  font-family: raleway, sans-serif;
+  color: $white;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  >span {
+    color: $blue2;
+  }
+}
+
+@include tablet {
+  .header {
+    &-wrapper {
+      padding: 20px;
+    }
+  }
+}

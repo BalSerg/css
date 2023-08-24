@@ -1,0 +1,145 @@
+.pseudo-select {
+  position: relative;
+
+  &:after,
+  &:before {
+    position: absolute;
+    top: 20px;
+
+    height: 2px;
+    width: 8px;
+    display: block;
+
+    background: $black;
+
+    content: "";
+    transition: $transition-out;
+  }
+
+  &:before {
+    right: 20px;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    right: 15px;
+    transform: rotate(-45deg);
+  }
+
+  &.is-active {
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+
+    .input,
+    .input:focus {
+      color: $white;
+
+      background: rgba(61, 64, 80, 0.85);
+      box-shadow: 0 0 0 2px rgba(61, 64, 80, 0.85);
+      border-radius: 4px 4px 0 0;
+    }
+
+    .pseudo-select-dropdown {
+      opacity: 1;
+      transform: scaleY(1);
+      transition: $transition-in;
+    }
+  }
+
+  .input {
+    cursor: pointer;
+
+    &:focus {
+      color: $gray;
+
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  &-dropdown {
+    position: absolute;
+    top: 42px;
+    left: -1px;
+    z-index: 1;
+
+    box-sizing: border-box;
+    width: calc(100% + 3px);
+    padding: 3px;
+
+    border: 1px solid $gray3;
+    background: $gray;
+    border-radius: 0 0 3px 3px;
+
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0);
+    transition: $transition-out;
+
+    &-wrapper {
+      padding: 20px 10px;
+
+      height: 200px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $gray3;
+        border-radius: 3px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $sky;
+        border-radius: 3px;
+        width: 7px;
+      }
+
+      scrollbar-width: thin;
+      scrollbar-color: $sky $gray3;
+    }
+
+
+
+    &__item {
+      @include text-lvl-4;
+
+      margin: 0 0 20px;
+      display: block;
+
+      color: $white;
+
+      transition: $transition-out;
+      cursor: pointer;
+
+      &:hover {
+        color: $blue2;
+
+        transition: $transition-in;
+      }
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .pseudo-select {
+    &:before {
+      right: 10px;
+    }
+
+    &:after {
+      right: 5px;
+    }
+  }
+}

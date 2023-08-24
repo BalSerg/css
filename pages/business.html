@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHD</title>
+
+    <link rel="stylesheet" href="../styles/style.min.css">
+</head>
+<body>
+    <main class="page">
+        <header class="header header_sticky">
+            <div class="header-wrapper">
+                <div class="logo">LoremIpsum.<span>Net</span></div>
+                <div class="burger is-mobile js-burger">
+                    <span></span>
+                </div>
+                <nav class="menu js-menu">
+                    <div class="menu__item">Бизнес</div>
+                    <div class="menu__item">О нас</div>
+                    <div class="menu__item">Цены</div>
+                    <div class="menu__item js-go-from-menu">Оформить заказ</div>
+                </nav>
+            </div>
+        </header>
+        <section class="section">
+            <div class="section-wrapper">
+                <h1 class="title-level-1 title-level-1_short"><span class="title-level-1_sky">Lorem ipsum</span> dolor sit ametconsectetur <span class="title-level-1_sky">adipiscing</span></h1>
+                <div class="section-content">
+                    <p class="section-content__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+                    <ul class="ul-list ul-list_ndash">
+                        <li class="ul-list__item">Totam rem aperiam eaque ipsa</li>
+                        <li class="ul-list__item">Sit voluptatem accusantium doloremque laudantium</li>
+                        <li class="ul-list__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+                    </ul>
+                </div>
+                <div class="section-buttons">
+                    <button class="button_sky js-go-order">заказать</button>
+                    <button class="button_white">подробнее</button>
+                </div>
+            </div>
+        </section>
+        <section class="order js-for-menu js-for-order">
+            <div class="order-wrapper">
+                <div class="order-info">
+                    <h2 class="order-info__title">Оформление <span>Заказа</span></h2>
+                    <p class="order-info__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+                </div>
+                <div class="steps">
+                    <div class="steps-wrapper">
+                        <div class="steps__item">
+                            <div class="steps__item-img">
+                                <img src="../images/search.svg" alt=""/>
+                            </div>
+                            <div class="steps__item-text">Lorem ipsum dolor sit amet</div>
+                        </div>
+                        <div class="steps__item">
+                            <div class="steps__item-img">
+                                <img src="../images/percent.svg" alt=""/>
+                            </div>
+                            <div class="steps__item-text">Сonsect eturadipiscing elit</div>
+                        </div>
+                        <div class="steps__item">
+                            <div class="steps__item-img">
+                                <img src="../images/doc.svg" alt=""/>
+                            </div>
+                            <div class="steps__item-text">Sed do eiusmod tempor</div>
+                        </div>
+                        <div class="steps__item">
+                            <div class="steps__item-img">
+                                <img src="../images/mail.svg" alt=""/>
+                            </div>
+                            <div class="steps__item-text">Esse cillum doloreeu fugiat</div>
+                        </div>
+                        <div class="steps__item">
+                            <div class="steps__item-img">
+                                <img src="../images/money.svg" alt=""/>
+                            </div>
+                            <div class="steps__item-text">Excepteur sint occaecat cupidatat non proident</div>
+                        </div>
+                    </div>
+                </div>
+                <form class="form">
+                    <div class="form-wrapper">
+                        <div class="form-row">
+                            <div class="pseudo-select js-pseudo-select">
+                                <input class="input js-pseudo-select-input" name="type" type="text" value="Выберите тип системы" readonly/>
+                                <div class="pseudo-select-dropdown">
+                                    <div class="pseudo-select-dropdown-wrapper is-active js-dropdown">
+                                        <div class="pseudo-select-dropdown__item">Sed ut perspiciatis</div>
+                                        <div class="pseudo-select-dropdown__item">Nemo enim ipsam</div>
+                                        <div class="pseudo-select-dropdown__item">Et harum quidem</div>
+                                        <div class="pseudo-select-dropdown__item">Temporibus autem</div>
+                                        <div class="pseudo-select-dropdown__item">Itaque earum rerum</div>
+                                        <div class="pseudo-select-dropdown__item">Sed ut perspiciatis</div>
+                                        <div class="pseudo-select-dropdown__item">Nemo enim ipsam</div>
+                                        <div class="pseudo-select-dropdown__item">Et harum quidem</div>
+                                        <div class="pseudo-select-dropdown__item">Temporibus autem</div>
+                                        <div class="pseudo-select-dropdown__item">Itaque earum rerum</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-input js-for-input">
+                                <input type="text" name="email" class="input js-input"/>
+                                <label class="form-input__label">Ваш e-mail</label>
+                            </div>
+                            <div class="form-input js-for-input">
+                                <input type="text" name="name" class="input js-input"/>
+                                <label class="form-input__label">Ваше имя</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-input form-input_range">
+                                <label class="input-range">
+                                    <span class="input-range-info">
+                                        <span class="input-range__text">Sed ut perspiciatis, unde omnis iste natus</span>
+                                        <span class="input-range__value js-range-value"></span><span>%</span>
+                                    </span>
+                                    <input type="range" min="1" max="100" step="1" name="" value="75" class="input-range__input js-range"/>
+                                </label>
+                            </div>
+                            <div class="form-input">
+                                <label class="input input-file">
+                                    <img class="input-file__img" src="../images/file.svg" alt=""/>
+                                    <span class="input-file__text">Прикрепить файл</span>
+                                    <input type="file" name="file" value="" class="input-file__input"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row form-row_submit">
+                            <input type="submit" class="form__submit" value="Отправить" name=""/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <div class="footer__copy">&copy; 2018 «LoremIpsum.net» Все права защищены.</div>
+                <div class="footer__separator"></div>
+                <a class="footer__item footer__item_darkness" href="https://qiwi.com/" title="" target="_blank">
+                    <img src="../images/ico-qiwi.svg" alt=""/>
+                    Qiwi wallet
+                </a>
+                <a class="footer__item footer__item_darkness" href="https://yoomoney.ru/" title="" target="_blank">
+                    <img src="../images/ico-yam.svg" alt=""/>
+                    Yandex Money
+                </a>
+                <a class="footer__item footer__item_darkness" href="https://www.webmoney.ru/" title="" target="_blank">
+                    <img src="../images/ico-webm.svg" alt=""/>
+                    Web Money
+                </a>
+                <div class="footer__separator"></div>
+                <a href="mailto:info@ipsum228.com" class="footer__item">
+                    <img src="../images/ico-mail.svg" alt=""/>
+                    info@ipsum228.com
+                </a>
+                <a href="https://vk.com/" target="_blank" class="footer__item">
+                    <img src="../images/ico-vk.svg" alt=""/>
+                    Мы вконтакте
+                </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="../script/main.js"></script>
+</body>
+</html>

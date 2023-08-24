@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "lato";
+  src : url("../fonts/Lato-Regular.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "raleway";
+  src : url("../fonts/Raleway.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import "reset";
+@import "services/mixins";
+@import "layouts/header";
+@import "components/menu";
+@import "components/burger";
+@import "components/titles";
+@import "components/lists";
+@import "components/buttons";
+@import "layouts/section";
+@import "layouts/order";
+@import "components/steps";
+@import "components/input";
+@import "components/form";
+@import "components/pseudo-select";
+@import "components/input-file";
+@import "components/input-range";
+@import "layouts/footer";
+
+.is-mobile {
+  display: none;
+}
+
+@include mobile {
+  .is-mobile {
+    display: block;
+  }
+}

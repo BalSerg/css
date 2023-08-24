@@ -1,0 +1,108 @@
+@import "../services/mixins";
+
+.steps {
+  &-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: self-start;
+    gap: 0 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    &:before {
+      position: absolute;
+      top: 50px;
+      left: 97px;
+
+      width: calc(100% - 90px - 90px);
+      height: 6px;
+      display: block;
+
+      background: url("../images/dot.png") 0 0 repeat-x;
+
+      content: "";
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    max-width: 209px;
+    width: 100%;
+
+    &-img {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+
+      background: $sky;
+      border-radius: 50%;
+      border: 5px solid $see-wave;
+
+      >img {
+        display: block;
+        margin: auto;
+        width: 55px;
+      }
+    }
+
+    &-text {
+      @include text-lvl-5;
+
+      max-width: 191px;
+
+      color: $white;
+      text-align: center;
+    }
+  }
+}
+
+@include tablet {
+  .steps {
+    &-wrapper {
+      gap: 0 15px;
+
+      &:before {
+        top: 23px;
+      }
+    }
+
+    &__item {
+      &-img {
+        width: 50px;
+        height: 50px;
+
+        >img {
+          width: 22px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .steps {
+    &-wrapper {
+      flex-direction: column;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &__item {
+      gap: 10px 0;
+      margin: 0 0 20px;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}

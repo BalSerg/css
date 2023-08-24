@@ -1,0 +1,27 @@
+.input {
+  @include text-lvl-4;
+
+  padding: 10px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+
+  color: $gray;
+
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+  border-radius: 4px;
+
+  transition: $transition-out;
+
+
+  &:focus,
+  .is-filled {
+    color: $black;
+
+    background: $white;
+    box-shadow: 0 0 0 2px $sky;
+
+    transition: $transition-in;
+  }
+}

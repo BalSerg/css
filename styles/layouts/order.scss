@@ -1,0 +1,47 @@
+.order {
+  background: $gray url("../images/map.png") center center;
+  background-size: cover;
+
+  padding: 121px 0 151px;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px 0;
+  }
+
+  &-info {
+    &__title {
+      @include text-lvl-2;
+
+      margin: 0 0 30px;
+
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 800;
+      text-align: center;
+
+      >span {
+        color: $sky;
+      }
+    }
+
+    &__text {
+      @include text-lvl-4;
+
+      color: $gray2;
+    }
+  }
+}
+
+@include tablet {
+  .order {
+    padding: 60px 0 75px;
+
+    &-wrapper {
+      gap: 40px 0;
+    }
+  }
+}
