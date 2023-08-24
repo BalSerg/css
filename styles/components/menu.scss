@@ -34,6 +34,7 @@
     right: 0;
 
     padding: 20px;
+    display: block;
 
     background: rgba(16, 16, 29, 0.90);
 
@@ -42,15 +43,16 @@
     transform-origin: 0 top;
     transition: $transition-out;
 
-    &.is-active {
+    &__item {
       display: block;
+    }
 
+    &.is-active {
       opacity: 1;
       transform: scaleY(1);
       transition: $transition-in;
 
       .menu__item {
-        display: block;
         margin: 0 0 20px;
 
         &:last-of-type {
